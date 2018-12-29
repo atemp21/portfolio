@@ -45,7 +45,7 @@ $(document).ready(function () {
     t1.staggerFrom(".sidebar ul li a", 1, {xPercent:-100},0.2)
     t1.staggerFrom(".card",1,{xPercent:100},0.2)
     TweenMax.from("#contact-container",2,{xPercent:100})
-    TweenMax.from(".navbar",2,{xPercent:100})
+   // TweenMax.from(".navbar",2,{xPercent:100})
 
     //Contact form validation
     $(this).on("submit", "#contact-form", function (e) {
