@@ -1,16 +1,22 @@
 
-$primary: rgb(44,69,123);
-$secondary: rgb(184,161,52);
+$primary: #292929;
+$secondary: #fff572;
+$text: #dadada;
+$text-secondary: #80ffa2;
+$shadow: black;
 $font:  "Saira Extra Condensed", sans-serif;
 $font-p: "Muli", sans-serif;
 
+body{
+    background-color: #333333;
+}
 .sidebar-wrapper{
     width: 300px;
     height: 100%;
     position: fixed;
     -webkit-transition: all .3s linear 0s;
   transition: all .3s linear 0s;
-  box-shadow: grey 1px 1px 14px 1px;
+  box-shadow: $shadow 1px 1px 14px 1px;
 
 }
 .sidebar-wrapper.closed{
@@ -42,7 +48,7 @@ $font-p: "Muli", sans-serif;
     text-align: center;
 }
 .sidebar ul li{
-    color: $secondary;
+    color: $text-secondary;
     font-family: $font;
     text-transform: uppercase;
     width: 100%;
@@ -52,13 +58,13 @@ $font-p: "Muli", sans-serif;
     font-size: 35px;
 }
 .sidebar ul li a{
-    color: $secondary;
+    color: $text-secondary;
     display: inline-block;
     width: 100%;
 }
 .sidebar ul li:hover{
     cursor: pointer;
-    background-color: #3b558c;
+    background-color: #333333;
 }
 .main-wrapper{
     width: 100%;
@@ -102,7 +108,7 @@ $font-p: "Muli", sans-serif;
 .hamburger-inner{
     width: 100%;
     height: 5px;
-    background-color: gray;
+    background-color: $text-secondary;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -110,7 +116,7 @@ $font-p: "Muli", sans-serif;
     -webkit-transition: all .3s linear 0s;
   transition: all .3s linear 0s;
   border-radius: 10px;
-    box-shadow: #dadada 1px 1px 2px 0px;
+    box-shadow: $shadow 1px 1px 2px 0px;
 
 }
 
@@ -128,24 +134,24 @@ $font-p: "Muli", sans-serif;
     position: absolute;
     width: 40px;
     height: 5px;
-    background: gray;    
+    background: $text-secondary;    
     -webkit-transition: all .3s linear 0s;
   transition: all .3s linear 0s;
   border-radius: 10px;
-    box-shadow: #dadada 1px 1px 2px 0px;
+    box-shadow: $shadow 1px 1px 2px 0px;
 
 }
 
 .hamburger-inner.closed{
     width: 100%;
     height: 5px;
-    background-color: rgba(55, 55, 55, 0);
+    background-color: #333333;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
     border-radius: 10px;
-    box-shadow: #ffffff 1px 1px 2px 0px;
+    box-shadow: #333333 1px 1px 2px 0px;
 
 }
 
@@ -154,10 +160,10 @@ $font-p: "Muli", sans-serif;
     position: absolute;
     width: 40px;
     height: 5px;
-    background: gray; 
+    background: $text-secondary; 
     transform: translate(2px, 5px) rotate(45deg);
     border-radius: 10px;
-    box-shadow: #dadada 1px 1px 2px 0px;
+    box-shadow: $shadow 1px 1px 2px 0px;
 
 }
 .hamburger-inner.closed::after{
@@ -165,10 +171,10 @@ $font-p: "Muli", sans-serif;
     position: absolute;
     width: 40px;
     height: 5px;
-    background: gray; 
+    background: $text-secondary; 
     transform: translate(1px, -15px) rotate(-45deg);
     border-radius: 10px;
-    box-shadow: #dadada 1px 1px 2px 0px;
+    box-shadow: $shadow 1px 1px 2px 0px;
 
 }
 
@@ -192,13 +198,13 @@ $font-p: "Muli", sans-serif;
 #name{
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 7em;
-    color: gray;
+    color: $text;
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: -30px;
 }
 #name span{
-    color:$primary;
+    color:$text-secondary;
 }
 ul{
     display: inline-flex;
@@ -208,18 +214,18 @@ ul{
 }
 li{
     list-style: none;
-    color: $primary;
+    color: $text-secondary;
     font-family: 'Saira Extra Condensed', sans-serif;
     text-transform: uppercase;
     font-size: 28px;
     margin-right: 15px;
 }
 li a{
-    color: gray;
+    color: $text;
 }
 li a:hover{
     text-decoration: none;
-    color: $primary;
+    color: $text-secondary;
 }
 
 .col-md-4{
@@ -232,7 +238,7 @@ h2{
 }
 .col-md-4 p{
     font-family: 'Muli', sans-serif;
-    color: gray;
+    color: $text;
     font-weight: 400;
 }
 
@@ -242,15 +248,17 @@ h2{
     align-items: baseline;
     justify-content: space-between;
 }
-
+h5{
+    color: $text;
+}
 i{
-    color:gray;
+    color:$text;
     font-size: 60px;
     padding: 10px;
 }
 
 i:hover{
-    color:$primary;
+    color:$text-secondary;
 }
 .flex-lang{
     display: flex;
@@ -262,17 +270,17 @@ i:hover{
     margin: 0;
     width: 100%;
     height: 1px;
-    background-color: #d6d6d6;
+    background-color: #4c4c4c;
     display: flex;
 }
 
 #info img{
     float: right;
-    border: 10px solid rgb(200, 235, 255);
+    border: 10px solid #333333;
 }
 
 .col-md-4:first-of-type, .col-md-4:nth-of-type(2){
-    border-right: 1px solid #d6d6d6;
+    border-right: 1px solid #4c4c4c;
 }
 .col-md-4{
     margin-top: 30px;
@@ -292,7 +300,14 @@ h2{
 }
 .card:hover{
     cursor: pointer;
-    box-shadow: none;
+    box-shadow: $shadow 1px 1px 1px 0px;
+    background: #333331 radial-gradient(circle, transparent 1%, #333331 1%) center/15000%;
+}
+
+.card:active{
+    background-color: #333333;
+    background-size: 100%;
+    transition: background 0s;
 }
 
 .card{
@@ -300,14 +315,17 @@ h2{
     height: 200px;
     max-height: 200px;
     margin: 10px;
-    box-shadow: #adadad 7px 6px 9px 0px;
+    box-shadow: $shadow 1px 1px 1px 0px;
+    background-color: $primary;
+    background-position: center;
+  transition: background 0.8s;
 }
 .card-body{
     text-align: center;
 }
 
 .card-title{
-    color: $primary;
+    color: $text-secondary;
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 25px;
     font-weight: bold;
@@ -316,7 +334,7 @@ h2{
     content: "";
     height: 1px;
     width: 80%;
-    background-color: #dadada;
+    background-color: $primary;
     display: inline-flex;
 }
 .card-subtitle{
@@ -325,7 +343,7 @@ h2{
 }
 .card-text{
     font-family: 'Muli', sans-serif;
-    color: gray;
+    color: $text;
     font-weight: 400;
 }
 
@@ -336,14 +354,18 @@ h2{
     border-right: none;
     border-radius: 0px;
     padding: 5px;
+    background-color: #333333;
+    color: $text;
 }
 .form-control:focus{
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid $text-secondary;
     box-shadow: none;
+    background-color: #333333;
+    color: $text;
 }
 
 label{
-    color: $primary;
+    color: $text-secondary;
     font-family: $font-p;
     text-transform: uppercase;
     font-weight: bold;
@@ -359,17 +381,30 @@ label.active{
     font-family: $font-p;
     text-transform: uppercase;
     font-weight: bold;
-    color: $primary;
+    color: $text-secondary;
     background-color: transparent;
-    border-color: $primary;
+    border-color: $text-secondary;
     border-radius: 100px;
     padding: 10px 40px 10px 40px;
-    border: 2px solid $primary;
+    border: 2px solid $text-secondary;
 }
 #contact-button:hover{
     cursor: pointer;
     color: white;
-    background-color: $primary;
+    background-color: $text-secondary;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: $secondary;
 }
 
 /* MEDIA QUERY */
@@ -378,7 +413,7 @@ label.active{
     #name{
         font-family: 'Saira Extra Condensed', sans-serif;
         font-size: 50px;
-        color: gray;
+        color:$text;
         text-transform: uppercase;
         font-weight: 600;
         margin-bottom: -30px;
@@ -390,7 +425,7 @@ label.active{
         margin-top: 15px;
     }
     .col-md-4:first-of-type, .col-md-4:nth-of-type(2){
-        border-bottom: 1px solid #d6d6d6;
+        border-bottom: 1px solid #4c4c4c;
         border-right: none;
     }
 
@@ -410,7 +445,7 @@ label.active{
     background-color: $primary;
 }
 .nav-link{
-    color: $secondary !important;
+    color: $text-secondary !important;
     display: inline-block;
     width: 100%;
 }
@@ -425,5 +460,5 @@ label.active{
     text-align: center;
 }
 .sidebar img{
-    border: 10px solid #476bb9;
+    border: 10px solid #333333;
 }
