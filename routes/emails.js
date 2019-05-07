@@ -12,7 +12,7 @@ router.post("", (req, res, next) => {
 
   var data = {
     from: 'Aaron Templeton <aaron.templeton@live.com>',
-    to: "aaron.templeton@live.com",
+    to: "aarontempleton21@gmail.com",
     subject: "Contact from Portfolio",
     text: t
   };

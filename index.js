@@ -47,6 +47,7 @@ $(document).ready(function () {
     // TweenMax.from("#contact-container",2,{xPercent:100})
     // TweenMax.from(".navbar",2,{xPercent:100})
 
+
     //Contact form validation
     $(this).on("submit", "#contact-form", function (e) {
         e.preventDefault();
