@@ -1,493 +1,63 @@
+// font-family: 'Abel', sans-serif;
+// font-family: 'Geo', sans-serif;
+// font-family: 'Orbitron', sans-serif;
+$bg-1: #0C3654;
+$bg-2: #3E505B;
+$bg-3: #1A1D1A;
+$bg-4: #03120E;
+$txt-1: #8AB0AB;
+$txt-2: #F9F8F7;
 
-$primary: #292929;
-$secondary: #fff572;
-$text: #dadada;
-$text-secondary: #80ffa2;
-$shadow: black;
-$font:  "Saira Extra Condensed", sans-serif;
-$font-p: "Muli", sans-serif;
-
-body{
-    background-color: #333333;
-}
-.sidebar-wrapper{
-    width: 300px;
-    height: 100%;
-    position: fixed;
-    -webkit-transition: all .3s linear 0s;
-  transition: all .3s linear 0s;
-  box-shadow: $shadow 1px 1px 14px 1px;
-
-}
-.sidebar-wrapper.closed{
-    width: 0px;
-}
-.sidebar.closed{
-    width: 0px;
-}
-.shifted{
-    transform: translateX(-300px);
-    -webkit-transition: all .3s linear 0s;
-  transition: all .3s linear 0s;
-}
-.unshifted{
-    -webkit-transition: all .3s linear 0s;
-  transition: all .3s linear 0s;
-}
-
-.sidebar .container{
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.sidebar ul{
-    padding-top: 20px;
-    list-style: none;
-    text-align: center;
-}
-.sidebar ul li{
-    color: $text-secondary;
-    font-family: $font;
+//elements
+h1{
+    color: $txt-1;
+    font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
-    width: 100%;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 10px;
-    font-size: 35px;
+    font-size: 50px;
 }
-.sidebar ul li a{
-    color: $text-secondary;
-    display: inline-block;
-    width: 100%;
+h2{
+    color: #5c716e;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 45px;
 }
-.sidebar ul li:hover{
-    cursor: pointer;
-    background-color: #333333;
+p{
+    color: $txt-2;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
 }
-.main-wrapper{
+//classes
+.container-fluid{
     width: 100%;
     height: 100%;
-    padding-left: 300px;
-    -webkit-transition: all .3s linear 0s;
-  transition: all .3s linear 0s;
+    padding: 0;
+    margin: 0;
 }
-
-.main-wrapper.closed{
-    width: 100%;
-    height: 100%;
-    padding-left: 0px;
-}
-
-.sidebar{
-    width: 100%;
-    background-color: $primary;
-    height: 100%;
-}
-
-
-.hamburger{
+.container{
     position: relative;
-    top: 10px;
-    left: 10px;
-    width: 40px;
-    height: 40px;
-}
-.hamburger:hover{
-    cursor: pointer;
-}
-
-.hamburger-box{
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.hamburger-inner{
-    width: 100%;
-    height: 5px;
-    background-color: $text-secondary;
-    top:50%;
-    left: 50%;
+    top: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
-    position: absolute;
-    -webkit-transition: all .3s linear 0s;
-  transition: all .3s linear 0s;
-  border-radius: 10px;
-    box-shadow: $shadow 1px 1px 2px 0px;
-
 }
-
-.hamburger-inner::before{
-    top: -10px;
-}
-
-.hamburger-inner::after{
-    top: 10px;
-}
-
-
-.hamburger-inner::before, .hamburger-inner::after{
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    background: $text-secondary;    
-    -webkit-transition: all .3s linear 0s;
-  transition: all .3s linear 0s;
-  border-radius: 10px;
-    box-shadow: $shadow 1px 1px 2px 0px;
-
-}
-
-.hamburger-inner.closed{
-    width: 100%;
-    height: 5px;
-    background-color: #333333;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    border-radius: 10px;
-    box-shadow: #333333 1px 1px 2px 0px;
-
-}
-
-.hamburger-inner.closed::before{
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    background: $text-secondary; 
-    transform: translate(2px, 5px) rotate(45deg);
-    border-radius: 10px;
-    box-shadow: $shadow 1px 1px 2px 0px;
-
-}
-.hamburger-inner.closed::after{
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    background: $text-secondary; 
-    transform: translate(1px, -15px) rotate(-45deg);
-    border-radius: 10px;
-    box-shadow: $shadow 1px 1px 2px 0px;
-
-}
-
-#name-container{
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-#about-container{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-#work-container{
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-#contact-container{
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-#name{
-    font-family: 'Saira Extra Condensed', sans-serif;
-    font-size: 7em;
-    color: $text;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: -30px;
-}
-#name span{
-    color:$text-secondary;
-}
-ul{
-    display: inline-flex;
-    align-items: flex-start;
-    padding: 0px;
-    flex-flow: row wrap;
-}
-li{
-    list-style: none;
-    color: $text-secondary;
-    font-family: 'Saira Extra Condensed', sans-serif;
-    text-transform: uppercase;
-    font-size: 28px;
-    margin-right: 15px;
-}
-li a{
-    color: $text;
-}
-li a:hover{
+.contact-button{
+    color: $txt-1;
+    border: 2px solid $txt-1;
     text-decoration: none;
-    color: $text-secondary;
-}
-
-.col-md-4{
-    padding: 20px;
-}
-h2{
-    font-family: 'Saira Extra Condensed', sans-serif;
-    text-transform: uppercase;
-    color: $secondary;
-}
-.col-md-4 p{
-    font-family: 'Muli', sans-serif;
-    color: $text;
-    font-weight: 400;
-}
-
-.flex-edu{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: baseline;
-    justify-content: space-between;
-}
-h5{
-    color: $text;
-}
-i{
-    color:$text;
-    font-size: 60px;
     padding: 10px;
-}
-
-i:hover{
-    color:$text-secondary;
-}
-.flex-lang{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.h-line{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #4c4c4c;
-    display: flex;
-}
-
-#info img{
-    float: right;
-    border: 10px solid #333333;
-}
-
-.col-md-4:first-of-type, .col-md-4:nth-of-type(2){
-    border-right: 1px solid #4c4c4c;
-}
-.col-md-4{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.flex-work{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-h2{
-    font-family: 'Saira Extra Condensed', sans-serif;
-    text-transform: uppercase;
-    color: $secondary;
-    text-align: center;
-}
-.card:hover{
-    cursor: pointer;
-    box-shadow: $shadow 1px 1px 1px 0px;
-    background: #333331 radial-gradient(circle, transparent 1%, #333331 1%) center/15000%;
-}
-
-.card:active{
-    background-color: #333333;
-    background-size: 100%;
-    transition: background 0s;
-}
-
-.card{
-    border-radius: 0px;
-    height: 200px;
-    max-height: 200px;
-    margin: 10px;
-    box-shadow: $shadow 1px 1px 1px 0px;
-    background-color: $primary;
-    background-position: center;
-  transition: background 0.8s;
-}
-.card-body{
-    text-align: center;
-}
-
-.card-title{
-    color: $text-secondary;
-    font-family: 'Saira Extra Condensed', sans-serif;
+    font-family: 'Geo', sans-serif;
     font-size: 25px;
-    font-weight: bold;
 }
-.card-title::after{
-    content: "";
-    height: 1px;
-    width: 80%;
-    background-color: $primary;
-    display: inline-flex;
+.contact-button:hover{
+    text-decoration: none;
+    color: $txt-1;
+    background-color: scale-color($bg-1, $lightness: 10%);
 }
-.card-subtitle{
-    font-family: 'Muli', sans-serif;
-    font-weight: bold;
+//ids
+#section-1{
+    background-color: $bg-1;
 }
-.card-text{
-    font-family: 'Muli', sans-serif;
-    color: $text;
-    font-weight: 400;
+#section-2{
+    background-color: $bg-2;
 }
 
+//media query
 
-.form-control{
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    border-radius: 0px;
-    padding: 5px;
-    background-color: #333333;
-    color: $text;
-}
-.form-control:focus{
-    border-bottom: 1px solid $text-secondary;
-    box-shadow: none;
-    background-color: #333333;
-    color: $text;
-}
-
-label{
-    color: $text-secondary;
-    font-family: $font-p;
-    text-transform: uppercase;
-    font-weight: bold;
-    transform: translateY(35px);
-    -webkit-transition: .3s linear all;
-    transition: .3s linear all;
-}
-label.active{
-    transform: translateY(5px) scale(.75);
-}
-
-#contact-button{
-    font-family: $font-p;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $text-secondary;
-    background-color: transparent;
-    border-color: $text-secondary;
-    border-radius: 100px;
-    padding: 10px 40px 10px 40px;
-    border: 2px solid $text-secondary;
-}
-#contact-button:hover{
-    cursor: pointer;
-    color: white;
-    background-color: $text-secondary;
-}
-
-body::-webkit-scrollbar {
-    width: 3px;
-}
- 
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: $secondary;
-}
-
-#online-container p{
-    color:$text;
-    text-align: center;
-    font-family: $font-p;
-}
-
-#online-container ul{
-    flex-flow: column;
-    transform: translate(50%);
-}
-
-#online-container ul li{
-    color: $text;
-    font-family: $font-p;
-    text-transform: none;
-    font-size: 22px;
-}
-
-#online-container ul li span{
-    display: block;
-    color: $text-secondary;
-    font-size: 12px;
-}
-
-/* MEDIA QUERY */
-
-@media screen and (max-width: 767px) {
-    #name{
-        font-family: 'Saira Extra Condensed', sans-serif;
-        font-size: 50px;
-        color:$text;
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-bottom: -30px;
-    }
-    ul{
-        display: flex;
-        align-items: flex-start;
-        flex-flow: row wrap;
-        margin-top: 15px;
-    }
-    .col-md-4:first-of-type, .col-md-4:nth-of-type(2){
-        border-bottom: 1px solid #4c4c4c;
-        border-right: none;
-    }
-
-    .main-wrapper{
-        width: 100%;
-        height: 100%;
-        padding-left: 0;
-    }
-    .main-wrapper.closed{
-        width: 100%;
-        height: 100%;
-        padding-left: 0;
-    }
-
-    #online-container ul{
-        flex-flow: column;
-    transform: translate(0%);
-    }
-}
-
-.navbar{
-    background-color: $primary;
-}
-.nav-link{
-    color: $text-secondary !important;
-    display: inline-block;
-    width: 100%;
-}
-.nav-item{
-    width: 100%;
-    text-align: center;
-}
-#contact-response{
-    color:$secondary;
-    font-family: $font;
-    text-transform: uppercase;
-    text-align: center;
-}
-.sidebar img{
-    border: 10px solid #333333;
-}
