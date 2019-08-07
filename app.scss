@@ -25,7 +25,23 @@ p{
     font-family: 'Abel', sans-serif;
     font-size: 20px;
 }
+i{
+    font-size: 50px;
+    color: $txt-2;
+}
+i:hover{
+    cursor: pointer;
+    color: scale-color($color: $bg-2, $lightness: 50%, $alpha: 1.0)
+}
 //classes
+
+.image:before{
+    content:'';
+    width: 200px;
+    height: 200px;
+    border: 2px solid $txt-1;
+    transform: translate(-10px, 10px);
+}
 .container-fluid{
     width: 100%;
     height: 100%;
