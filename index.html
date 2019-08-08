@@ -7,92 +7,117 @@
     <meta name="description" content="Aaron Templeton is a software engineer in Salt Lake City, UT.
          He attended Univserity of Utah and is currently available for hire.">
     <!--CSS Links-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Abel|Geo|Orbitron:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:400,700&display=swap" rel="stylesheet">
     <!--JS Scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="style-bundle.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid" id="section-1">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p>Hi. my name is</p>
-                </div>
+    <div class="container-fluid">
+        <div class="flex-container">
+            <div class="flex-sub-col">
+                <p>Hi. my name is</p>
+                <h1 style='font-size: 4em;'>Aaron Templeton</h1>
+                <h2>I build mobile and web software</h2>
+                <p>i am a software engineer based out of Salt Lake City, UT <br>
+                    specializing in the creation of mobile and web applications and tools</p>
+                <a href="mailto:aaron.templeton@live.com" class="contact-button">Get in Touch</a>
             </div>
-            <div class="row">
-                <div class="col">
-                    <h1>Aaron Templeton</h1>
-                    <h2>I build mobile and web software</h2>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="flex-container">
+            <div class="flex-sub-col">
+                <h1 class="header">About me</h1>
+                <div style="display: flex; flex-direction: row; align-content: space-between;">
+                    <div>
+                        <p>i am a student at the University of Utah<br>
+                            by spring 2020, i will have completed a bachelors degree in<br> computer science
+                            with a minor in mathematics</p>
+                        <p>i enjoy building exceptional web and mobile applications and tools<br>
+                            that provide intuitive service backed by effective and effecient data
+                        </p>
+                        <p>languages and frameworks i work with:</p>
+                    </div>
+                    <div id="photo" style="padding: 15px;">
+                        <img src="https://placehold.it/200x200" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>i am a software engineer based out of Salt Lake City, UT <br>
-                        specializing in the creation of mobile and web applications and tools</p>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <a href="mailto:aaron.templeton@live.com" class="contact-button">Get in Touch</a>
+                <div>
+                    <i class="devicon-angularjs-plain" data-toggle="tooltip" data-placement="top" title="AngularJS"></i>
+                    <i class="devicon-c-plain" data-toggle="tooltip" data-placement="top" title="C"></i>
+                    <i class="devicon-cplusplus-plain" data-toggle="tooltip" data-placement="top"
+                        title="C plus plus"></i>
+                    <i class="devicon-csharp-plain" data-toggle="tooltip" data-placement="top" title="C sharp"></i>
+                    <i class="devicon-express-original" data-toggle="tooltip" data-placement="top" title="Express"></i>
+                    <i class="devicon-java-plain" data-toggle="tooltip" data-placement="top" title="Java"></i>
+                    <i class="devicon-jquery-plain-wordmark" data-toggle="tooltip" data-placement="top"
+                        title="JQuery"></i>
+                    <i class="devicon-javascript-plain" data-toggle="tooltip" data-placement="top"
+                        title="Javascript"></i>
+                    <i class="devicon-linux-plain" data-toggle="tooltip" data-placement="top" title="Linux"></i>
+                    <i class="devicon-mysql-plain" data-toggle="tooltip" data-placement="top" title="MYSQL"></i>
+                    <i class="devicon-nodejs-plain" data-toggle="tooltip" data-placement="top" title="NodeJS"></i>
+                    <i class="devicon-php-plain" data-toggle="tooltip" data-placement="top" title="PHP"></i>
+                    <i class="devicon-react-original" data-toggle="tooltip" data-placement="top" title="React"></i>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid" id="section-2">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>about me</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>i am a student at the University of Utah<br>
-                        by spring 2020, i will have completed a bachelors degree in<br> computer science
-                        with a minor in mathematics</p>
-                    <p>i enjoy building exceptional web and mobile applications and tools<br>
-                        that provide intuitive service backed by effective and effecient data
-                    </p>
-                    <p>languages and frameworks i work with:</p>
-                    <div>
-                        <i class="devicon-angularjs-plain" data-toggle="tooltip" data-placement="top" title="AngularJS"></i>
-                        <i class="devicon-c-plain" data-toggle="tooltip" data-placement="top" title="C"></i>
-                        <i class="devicon-cplusplus-plain" data-toggle="tooltip" data-placement="top" title="C plus plus"></i>
-                        <i class="devicon-csharp-plain" data-toggle="tooltip" data-placement="top" title="C sharp"></i>
-                        <i class="devicon-express-original" data-toggle="tooltip" data-placement="top" title="Express"></i>
-                        <i class="devicon-java-plain" data-toggle="tooltip" data-placement="top" title="Java"></i>
-                        <i class="devicon-jquery-plain-wordmark" data-toggle="tooltip" data-placement="top" title="JQuery"></i>
-                        <i class="devicon-javascript-plain" data-toggle="tooltip" data-placement="top" title="Javascript"></i>
-                        <i class="devicon-linux-plain" data-toggle="tooltip" data-placement="top" title="Linux"></i>
-                        <i class="devicon-mysql-plain" data-toggle="tooltip" data-placement="top" title="MYSQL"></i>
-                        <i class="devicon-nodejs-plain" data-toggle="tooltip" data-placement="top" title="NodeJS"></i>
-                        <i class="devicon-php-plain" data-toggle="tooltip" data-placement="top" title="PHP"></i>
-                        <i class="devicon-react-original" data-toggle="tooltip" data-placement="top" title="React"></i>
+    <div class="container-fluid">
+        <h1 class="header" style="text-align:center;">Recent work</h1>
+        <div class="flex-container">
+            <div class="flex-sub-row">
+                <div class="work-card">
+                    <h3 class="work-header">Sample Project</h3>
+                    <p class="work-desc">this a short description of the project</p>
+                    <div class="work-preview">
+                            <a><img src="https://placehold.it/400x400" alt="" ></a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="image">
-                     <img src="https://placehold.it/200x200" alt="">
-                    </div>
+                    <ul class="work-tools">
+                        <li>React</li>
+                        <li>NodeJS</li>
+                        <li>MYSQL</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="flex-container">
+            <div class="flex-sub-col">
+                <h1 class="header">More projects</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="flex-container">
+            <div class="flex-sub-col">
+                <h1 class="header">Drop a line</h1>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

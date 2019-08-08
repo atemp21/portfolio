@@ -1,28 +1,32 @@
-// font-family: 'Abel', sans-serif;
-// font-family: 'Geo', sans-serif;
-// font-family: 'Orbitron', sans-serif;
-$bg-1: #0C3654;
+// https://coolors.co/01161e-124559-598392-aec3b0-eff6e0
+$bg-1: #01161E;
 $bg-2: #3E505B;
 $bg-3: #1A1D1A;
 $bg-4: #03120E;
-$txt-1: #8AB0AB;
-$txt-2: #F9F8F7;
+$txt-1: #598392;
+$txt-2: #AEC3B0;
+$txt-3: #124559;
+$font-h: 'Montserrat', sans-serif;
+$font-p: 'Karla', sans-serif;
 
 //elements
+body{
+    background-color: $bg-1;
+}
 h1{
     color: $txt-1;
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
+    font-family: $font-h;
     font-size: 50px;
+    font-weight: bold;
 }
 h2{
-    color: #5c716e;
-    font-family: 'Orbitron', sans-serif;
+    color: $txt-3;
+    font-family: $font-h;
     font-size: 45px;
 }
 p{
-    color: $txt-2;
-    font-family: 'Abel', sans-serif;
+    color: white;
+    font-family: $font-p;
     font-size: 20px;
 }
 i{
@@ -33,46 +37,143 @@ i:hover{
     cursor: pointer;
     color: scale-color($color: $bg-2, $lightness: 50%, $alpha: 1.0)
 }
+img{
+    border-radius: 3px;
+    z-index: 2;
+    position: relative;
+}
+
 //classes
 
-.image:before{
-    content:'';
-    width: 200px;
-    height: 200px;
-    border: 2px solid $txt-1;
-    transform: translate(-10px, 10px);
-}
+
 .container-fluid{
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
 }
-.container{
+.flex-container{
     position: relative;
     top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
+.flex-sub-col{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.flex-sub-row{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
 .contact-button{
     color: $txt-1;
     border: 2px solid $txt-1;
     text-decoration: none;
     padding: 10px;
-    font-family: 'Geo', sans-serif;
-    font-size: 25px;
+    font-family: $font-p;
+    font-size: 22px;
+    border-radius: 3px;
 }
 .contact-button:hover{
     text-decoration: none;
     color: $txt-1;
     background-color: scale-color($bg-1, $lightness: 10%);
 }
-//ids
-#section-1{
-    background-color: $bg-1;
+.header::after{
+    content: '';
+    width: 200px;
+    height: 1px;
+    background-color: $txt-3;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px;
 }
-#section-2{
-    background-color: $bg-2;
+.header::before{
+    content: '';
+    width: 10px;
+    height: 1px;
+    background-color: $txt-3;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px;
+}
+
+.work-header{
+    font-family: $font-h;
+    color: $txt-2;
+    position: relative;
+}
+
+.work-header::after{
+    content: "";
+    background-color: $txt-3;
+    width: 50px;
+    height: 2px;
+    display: inline-block;
+    margin: 2px;
+}
+.work-preview{
+    border-radius: 3px;
+    background-color: scale-color($color: $bg-1,  $lightness: 20%, $alpha: 1.0);
+    transform: translate(-50px, -40px);
+    position: relative;
+    z-index: 1;
+}
+.work-preview::after{
+    content: ""; // ::before and ::after both require content
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, $txt-1, $txt-2);
+    opacity: .6;
+    z-index: 2;
+}
+.work-preview:hover::after{
+    cursor: pointer;
+    opacity: 0.2;
+}
+.work-desc{
+    position: relative;
+    z-index: 3;
+    background-color: $txt-3;
+    padding: 15;
+    text-align: center;
+    border-radius: 3px;
+}
+.work-tools{
+    list-style: none;
+    transform: translate(-50px, -40px);
+    color: $txt-1;
+    font-family: $font-p;
+}
+.work-tools li{
+    display: inline;
+    padding: 5px;
+}
+//ids
+#photo::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    border: 4px solid #598392;
+    transform: translate(50px, -220px);
+    position: absolute;
+    border-radius: 3px;
 }
 
 //media query
