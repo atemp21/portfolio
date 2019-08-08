@@ -164,6 +164,21 @@ img{
     display: inline;
     padding: 5px;
 }
+.project-container{
+    overflow-x: scroll;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%,-60%);
+}
+.project-card{
+    background-color: scale-color($color: $bg-1,  $lightness: 3%, $alpha: 1.0);
+    border-radius: 3px;
+    max-height: 400px;
+    height: 400px;
+    width: 250px;
+}
 //ids
 #photo::after{
     content: '';
