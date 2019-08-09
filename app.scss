@@ -171,13 +171,56 @@ img{
     left: 50%;
     top:40%;
     transform: translate(-50%,-60%);
+    padding: 10px;
+}
+.project-container::-webkit-scrollbar{
+    background-color: $txt-1;
+    height: 2px;
+    border-radius: 50px;
+}
+.project-container::-webkit-scrollbar-thumb{
+    color:red;
 }
 .project-card{
-    background-color: scale-color($color: $bg-1,  $lightness: 3%, $alpha: 1.0);
+    background-color: scale-color($color: $txt-3,  $lightness: -3%, $alpha: 1.0);
     border-radius: 3px;
-    max-height: 400px;
-    height: 400px;
-    width: 250px;
+    max-height: 350px;
+    height: 350px;
+    width: 300px;
+}
+.project-card i{
+    font-size: 20px;
+    color: $txt-1;
+    padding: 8px;
+}
+.project-card i:hover{
+    color: $txt-1;
+}
+.project-header{
+    color: white;
+    text-align: center;
+    font-family: $font-h;
+    padding: 10px;
+}
+.project-desc{
+    font-family: $font-p;
+    font-size: 17px;
+    text-align: center;
+}
+.project-tools{
+    list-style: none;
+    color: $txt-1;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.project-tools li{
+    padding: 3px;
 }
 //ids
 #photo::after{
@@ -190,6 +233,40 @@ img{
     position: absolute;
     border-radius: 3px;
 }
+#photo::before{
+    content: ""; // ::before and ::after both require content
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-image: linear-gradient(120deg, $txt-1, $txt-2);
+    opacity: .6;
+    z-index: 3;
+}
+#photo:hover::before{
+    cursor: pointer;
+    opacity: 0.2;
+}
+#resume{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+#social-links{
+    position: fixed;
+    left: 20px;
+    top: 40%;
+    list-style: none;
+}
+#social-links li{
+    margin: 15px;
+}
+#social-links li a i{
+    color:$txt-1;
+    font-size: 30px;
+} 
+#social-links li a i:hover{
+    color: scale-color($color: $txt-1, $lightness: 30%, $alpha: 1.0)
+}  
 
 //media query
 
