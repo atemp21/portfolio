@@ -1,7 +1,7 @@
 
 module.exports = {
   mode: 'development',
-  entry: ['./app.scss', './index.js', './assets/work.js'],
+  entry: ['./app.scss', './index.js', './work.js'],
   output: {
     filename: 'style-bundle.js',
     path: __dirname,

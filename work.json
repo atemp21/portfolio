@@ -1,0 +1,16 @@
+[
+   {
+        "title": "FeedSeek",
+        "lang": ["React Native", "Yelp API"],
+        "desc": "Android app built with Yelp API. Finds nearby restuarants using location",
+        "url": "https://play.google.com/store/apps/details?id=com.temptech.feedseek",
+        "photo": "./assets/feedseek.png"
+    },
+    {
+        "title": "Terminator",
+        "lang": ["NodeJS", "Express", "Slack API" ,"Heroku"],
+        "desc": "app for Slack that deletes all user messages in a conversation",
+        "url": "https://message-terminator.herokuapp.com/",
+        "photo": "./assets/terminator.png"
+    }
+]
