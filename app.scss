@@ -43,6 +43,17 @@ img{
     position: relative;
 }
 
+*::-webkit-scrollbar{
+    background-color: $txt-3;
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: $txt-1;
+    border-radius: 50px;
+}
+
 //classes
 
 
@@ -66,6 +77,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
 }
 .flex-sub-row{
     position: absolute;
@@ -75,6 +87,7 @@ img{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    overflow-x: scroll;
 }
 
 .contact-button{
@@ -178,28 +191,14 @@ img{
     display: inline;
     padding: 5px;
 }
-.project-container{
-    overflow-x: scroll;
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top:40%;
-    transform: translate(-50%,-60%);
-    padding: 10px;
-    flex-direction: row;
-}
-.project-container::-webkit-scrollbar{
-    background-color: $txt-1;
-    height: 2px;
-    border-radius: 50px;
-}
 
 .project-card{
     background-color: scale-color($color: $txt-3,  $lightness: -3%, $alpha: 1.0);
     border-radius: 3px;
     max-height: 350px;
     height: 350px;
-    width: 275px;
+    min-width: 275px;
+    max-width: 275px;
     margin: 20px;
     padding: 10px;
     position: relative;
@@ -299,5 +298,66 @@ img{
     color: scale-color($color: $txt-1, $lightness: 30%, $alpha: 1.0);
     text-decoration: none;
 }
+#name-header{
+    font-size: 4em;
+}
+#recent-h, #project-h{
+    text-align:center; transform: translate(0px, 100px);
+}
 //media query
+@media only screen and (min-width : 320px) and (max-width : 767px) {
+    /* Styles */
+    #social-links, #email, #photo, #resume{
+        display: none;
+    }
+    #recent-work{
+        flex-direction: row;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 80%;
+        overflow-x: scroll;
+    }
+    .header::after, .header::before{
+        display: none;
+    }
+    #name-header{
+        font-size: 3em;
+    }
+    .work-card{
+        max-width: 275px;
+    }
+    .work-preview{
+        max-width: 275px;
+    }
+    #recent-h, #project-h{
+        text-align:center; transform: translate(0px, 10px);
+    }
+    .container-fluid{
+        min-height: 850px;
+    }
+    .flex-sub-col, .flex-sub-row{
+        width: 80%;
+    }
+    }
+    
 
+    
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-width : 768px) and (max-width : 1024px) {
+    /* Styles */
+    #social-links, #email{
+        display: none;
+    }
+    #recent-work{
+        flex-direction: column;
+    }
+    .flex-sub-col, .flex-sub-row{
+        width: 80%;
+    }
+    }
+   
