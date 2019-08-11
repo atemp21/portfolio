@@ -9,7 +9,14 @@ $(document).ready(function () {
   scrollSnap();
 
   $(window).on('resize', scrollSnap());
+
+  //GSAP TWEENS
+  TweenMax.from("#social-links", 2, {opacity:0, delay:4});
+  TweenMax.from(".container-fluid", 2,{x:'100%', delay:4 });
+  TweenMax.from("#email",2,{opacity:0, delay:4});
+  TweenMax.from("#resume",2,{y:'-100%',delay:3.5});
 })
+
 
 
 function scrollSnap() {

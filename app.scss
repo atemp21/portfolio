@@ -12,6 +12,7 @@ $font-p: 'Karla', sans-serif;
 //elements
 body{
     background-color: $bg-1;
+    overflow-x: hidden;
 }
 h1{
     color: $txt-1;
@@ -265,12 +266,14 @@ img{
     position: fixed;
     top: 15px;
     right: 15px;
+    z-index: 80;
 }
 #social-links{
     position: fixed;
     left: 20px;
     top: 40%;
     list-style: none;
+    z-index: 80;
 }
 #social-links li{
     margin: 15px;
@@ -293,6 +296,7 @@ img{
     text-orientation: mixed;
     letter-spacing: .1px;
     font-family: $font-p;
+    z-index: 80;
 }
 #email:hover{
     color: scale-color($color: $txt-1, $lightness: 30%, $alpha: 1.0);
@@ -304,10 +308,78 @@ img{
 #recent-h, #project-h{
     text-align:center; transform: translate(0px, 100px);
 }
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-1;
+    z-index: 90;
+    animation: move-page 2s ease forwards 3s   ;
+}
+#logo{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    animation: move-logo 2s ease forwards 3s;
+}
+#logo circle:nth-child(3){
+    //circle length 989.201
+    stroke-dasharray: 989.201;
+    stroke-dashoffset: 989.201;
+    animation: logo-anim 2s ease forwards 0.1s ;
+}
+#logo path:nth-child(4){
+    //length 252.532
+    stroke-dasharray: 252.532;
+    stroke-dashoffset: 252.532;
+    animation: logo-anim 2s ease forwards .3s ;
+
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 252.54;
+    stroke-dashoffset: 252.54;
+    animation: logo-anim 2s ease forwards .6s ;
+
+}
+
+@keyframes logo-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes move-logo{
+    to{
+        top: 40px;
+        left: 40px;
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+    }
+}
+@keyframes move-page{
+    to{
+        max-height: 0px;
+        display: none;
+    }
+}
+
+@keyframes logo-gone{
+    to{  top: 40px;
+      left: 40px;
+      font-size: 20px;
+      width: 0px;
+      height: 0px;
+    }
+  }
+
 //media query
 @media only screen and (min-width : 320px) and (max-width : 767px) {
     /* Styles */
-    #social-links, #email, #photo, #resume{
+    #social-links, #email, #photo{
         display: none;
     }
     #recent-work{
@@ -343,6 +415,17 @@ img{
     .flex-sub-col, .flex-sub-row{
         width: 80%;
     }
+    
+    #navbar{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: $bg-1;
+        z-index: 80;
+    }
+
     }
     
 
