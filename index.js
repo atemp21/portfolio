@@ -12,13 +12,9 @@ $(document).ready(function () {
 
   //GSAP TWEENS
   TweenMax.from("#social-links", 2, {opacity:0, delay:4});
-  TweenMax.from(".container-fluid", 2,{x:'100%', delay:4 });
+  TweenMax.from(".container-fluid", 2,{opacity:0, delay:4 });
   TweenMax.from("#email",2,{opacity:0, delay:4});
-  TweenMax.from("#resume",2,{y:'-100%',delay:3.5});
-})
-
-$("a").on("click",function(){
-    window.open(this.href, '_blank')
+  TweenMax.from("#resume",2,{opacity:0,delay:3.5});
 })
 
 
