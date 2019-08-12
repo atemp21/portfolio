@@ -17,6 +17,9 @@ $(document).ready(function () {
   TweenMax.from("#resume",2,{y:'-100%',delay:3.5});
 })
 
+$("a").on("click",function(){
+    window.open(this.href, '_blank')
+})
 
 
 function scrollSnap() {

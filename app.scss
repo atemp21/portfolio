@@ -249,6 +249,9 @@ img{
     position: absolute;
     border-radius: 3px;
 }
+#photo{
+    object-fit: cover;
+}
 #photo::before{
     content: ""; // ::before and ::after both require content
     width: 200px;
@@ -345,6 +348,9 @@ img{
     animation: logo-anim 2s ease forwards .6s ;
 
 }
+#social-links-mobile{
+    display: none;
+}
 
 @keyframes logo-anim{
     to{
@@ -426,6 +432,23 @@ img{
         z-index: 80;
     }
 
+    #social-links-mobile{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #social-links-mobile li{
+        margin: 15px;
+        font-size: 20px;
+        color: $txt-1;
+    }
+    #social-links-mobile li a i{
+        color: $txt-1;
+
+    }
+
     }
     
 
@@ -441,6 +464,21 @@ img{
     }
     .flex-sub-col, .flex-sub-row{
         width: 80%;
+    }
+    #social-links-mobile{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #social-links-mobile li{
+        margin: 15px;
+        font-size: 20px;
+    }
+    #social-links-mobile li a i{
+        color: $txt-1;
+
     }
     }
    
