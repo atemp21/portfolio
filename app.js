@@ -26,3 +26,8 @@ app.use('/contact',email_route);
 app.get('/', function(req, res){
   res.sendFile('index.html')
 })
+
+//ping server to stay awake
+setInterval(() => {
+  app.get('http://www.aarontempleton.com');
+}, 300000);
