@@ -410,7 +410,7 @@ img{
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        max-width: 80%;
+        max-width: 90%;
         overflow-x: scroll;
     }
     .header::after, .header::before{
@@ -425,8 +425,8 @@ img{
     .work-preview{
         max-width: 275px;
     }
-    #recent-h, #project-h{
-        text-align:center; transform: translate(0px, 10px);
+   #project-h{
+        text-align:center; transform: translate(0px, 150px);
     }
     .container-fluid{
         min-height: 850px;

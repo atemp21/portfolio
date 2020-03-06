@@ -8,7 +8,7 @@ get_json_data();
 function get_json_data(){
     $.getJSON('https://api.github.com/users/atemp21/repos', function(data){
         $.each(data, function(key, val){
-            $("#project-container").append('<div class="project-card"><div class="project-header-cont"><i class="fas fa-project-diagram"></i><a target="_blank" style="float:right;" href="'+val.html_url+'"><i class="fas fa-external-link-square-alt"></i></a></div><h3 class="project-header">'+val.name+'</h3> <p class="project-desc">'+val.description+'</p><ul class="project-tools"><li>'+val.language+'</li></ul></div></div>');
+            $("#project-container").append('<div class="project-card"><div class="project-header-cont"></div><h3 class="project-header">'+val.name+'</h3> <p class="project-desc">'+val.description+'</p><div class="text-center"><a class="btn btn-outline-info text-center" href="'+val.html_url+'">See on Github</a></div><ul class="project-tools"><li>'+val.language+'</li></ul></div></div>');
 
         })
     });
